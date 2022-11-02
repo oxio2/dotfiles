@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "${PWD}"
+buildDir="out"
+echo $buildDir 
+
+find -name "*.java" > sources.txt
+if [ ! -d "${buildDir}" ]; then
+	mkdir "${PWD}/${buildDir}"
+fi
+javac @sources.txt -d "${PWD}/${buildDir}"

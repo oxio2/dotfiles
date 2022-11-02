@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh --bg-scale --randomize --randomize ~/meme/imgs/meme_immagini/cazzate/*

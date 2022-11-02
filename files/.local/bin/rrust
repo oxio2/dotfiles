@@ -1,0 +1,9 @@
+#!/bin/bash
+
+_PWD=$(pwd);
+
+
+rustc $1 --out-dir $_PWD/src
+
+filename=${1%.rs}
+$_PWD/src/$filename
