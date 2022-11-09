@@ -10,8 +10,16 @@ set clipboard^=unnamed,unnamedplus
 
 set guifont=<>
 
+" Indents word-wrapped lines as much as the 'parent' line
+set breakindent
+" Ensures word-wrap does not split words
+set formatoptions=l
+set lbr
+
+
 
 call plug#begin()
+Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/ianding1/leetcode.vim'
 Plug 'https://github.com/Pocco81/auto-save.nvim'
 Plug 'https://github.com/lervag/vimtex'
@@ -37,6 +45,8 @@ Plug 'https://github.com/ThePrimeagen/vim-be-good'
 call plug#end()
 
 nnoremap <CR> :noh<CR><CR>
+
+:command SudoW :w !sudo tee %
 
 " for command mode
 nnoremap <S-Tab> <<

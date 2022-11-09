@@ -4,6 +4,15 @@
 !! urxvt colours
 #include ".config/xresources.d/xcolours/antix.conf"
 
+
+URxvt.font: xft:Hack\ Nerd\ Font:pixelsize=18
+
+urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
 ! special
 *.foreground:   #a8a19f
 *.background:   #1b1918
