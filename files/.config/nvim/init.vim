@@ -19,6 +19,7 @@ set lbr
 
 
 call plug#begin()
+Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/ianding1/leetcode.vim'
 Plug 'https://github.com/Pocco81/auto-save.nvim'
@@ -27,9 +28,9 @@ Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/scalameta/nvim-metals'
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/preservim/nerdtree' " Status bar
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
@@ -43,6 +44,10 @@ Plug 'https://github.com/puremourning/vimspector'
 Plug 'https://github.com/ThePrimeagen/vim-be-good'
 
 call plug#end()
+
+autocmd FileType markdown,octopress let b:surround_{char2nr('i')} = "_\r_"
+autocmd FileType markdown,octopress let b:surround_{char2nr('b')} = "**\r**"
+autocmd FileType markdown,octopress let b:surround_{char2nr('k')} = "**_\r_**"
 
 nnoremap <CR> :noh<CR><CR>
 
@@ -59,9 +64,7 @@ inoremap <S-Tab> <C-d>
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-nnoremap <C-f> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <C-f> :NERDTreeToggle<CR>
 
 
 " " Copy to clipboard
