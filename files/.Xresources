@@ -4,7 +4,6 @@
 !! urxvt colours
 #include ".config/xresources.d/xcolours/antix.conf"
 
-
 URxvt.font: xft:Hack\ Nerd\ Font:pixelsize=14
 
 urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed

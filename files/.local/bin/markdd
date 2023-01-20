@@ -1,0 +1,5 @@
+#!/bin/bash
+
+firefox $1.html & disown
+
+watch -n 1 "pandoc -f markdown -t html $1.md -o $1.html"

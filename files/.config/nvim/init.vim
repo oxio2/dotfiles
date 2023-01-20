@@ -19,6 +19,7 @@ set lbr
 
 
 call plug#begin()
+Plug 'https://github.com/lambdalisue/suda.vim'
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/ianding1/leetcode.vim'
