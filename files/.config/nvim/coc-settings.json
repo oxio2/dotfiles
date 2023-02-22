@@ -1,3 +1,17 @@
 {
-	"coc.preferences.jumpCommand": "tabe"
+	"coc.preferences.jumpCommand": "tabe",
+	"tsserver.extraPaths": [
+		"node_modules/@types"
+	],
+	"emmet.includeLanguages": {
+		"html": "html",
+		"css": "css"
+	},
+	"emmet.syntaxProfiles": {
+		"html": {
+			"css": "css"
+		}
+	},
+	"html.format.indentInnerHtml":true
+
 }
