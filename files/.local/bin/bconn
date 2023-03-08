@@ -1,0 +1,28 @@
+#!/bin/bash
+
+pulseaudio --kill
+pulseaudio --start
+
+service bluetooth restart
+
+sleep 5
+
+# Set the Bluetooth device address (replace with your device's address)
+device_address="11:03:DC:16:3F:AC"
+
+
+
+# Start Bluetoothctl and connect to the device
+echo -e "cancel-pairing $device_address\npair $device_address\npower on\nconnect $device_address\nquit" | bluetoothctl
+
+# Wait for the connection to complete
+sleep 5
+
+# Check if the connection was successful
+connected=$(echo -e "info $device_address\nquit" | bluetoothctl | grep "Connected: yes")
+
+if [ -n "$connected" ]; then
+  echo "Connected to device $device_address."
+else
+  echo "Failed to connect to device $device_address."
+fi

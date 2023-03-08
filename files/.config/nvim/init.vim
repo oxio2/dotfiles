@@ -6,11 +6,14 @@
 :set softtabstop=4
 :set mouse=v
 
+
 let mapleader = ","
 
 set clipboard=unnamed,unnamedplus
 
 set guifont=<>
+
+filetype indent on
 
 " Indents word-wrapped lines as much as the 'parent' line
 set breakindent
@@ -50,6 +53,7 @@ let maplocalleader = ","
 
 
 call plug#begin()
+Plug 'https://github.com/inkarkat/vim-UnconditionalPaste'
 Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 Plug 'https://github.com/nvim-lua/plenary.nvim'
 Plug 'https://github.com/nvim-telescope/telescope.nvim'
@@ -84,9 +88,10 @@ call plug#end()
 
 let g:indent_guides_enable_on_vim_startup = 1
 
+:let g:UnconditionalPaste_no_mappings = 1
 
 
-
+nmap <leader>q UnconditionalPaste<CR>
 
 autocmd FileType markdown,octopress let b:surround_{char2nr('i')} = "_\r_"
 autocmd FileType markdown,octopress let b:surround_{char2nr('b')} = "**\r**"
@@ -115,7 +120,6 @@ nnoremap <C-p> :NERDTreeToggle<CR>
 
 nnoremap gn :tabnew<CR>
 " nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
-
 
 
 " " Copy to clipboard
