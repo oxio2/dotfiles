@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /home/oxio2/Documenti/obsidian-vault/Epico/
+
+git add *
+git commit -m "bgit automatic commit"
+git push

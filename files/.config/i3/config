@@ -183,3 +183,6 @@ bar {
 
 exec  back
 
+bindsym $mod+t exec oxio2dotfiles/files/.local/bin/screenshott
+
+
