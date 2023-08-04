@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+a exec xkill
@@ -180,8 +180,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
 } 
-
-exec  back
 
 bindsym $mod+t exec oxio2dotfiles/files/.local/bin/screenshott
 
