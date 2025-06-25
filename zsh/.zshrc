@@ -1,3 +1,5 @@
+export DISABLE_AUTO_TITLE=true
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -97,3 +99,20 @@ alias vim="nvim"
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# pnpm
+export PNPM_HOME="/home/oxio2/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# FVM
+export PATH="/home/oxio2/.fvm_flutter/bin:$PATH"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/oxio2/.dart-cli-completion/zsh-config.zsh ]] && . /home/oxio2/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

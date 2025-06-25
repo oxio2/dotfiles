@@ -31,3 +31,4 @@ alias la="ls -a --color"
 alias l="ls --color"
 
 alias vim="nvim"
+. "$HOME/.cargo/env"

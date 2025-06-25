@@ -14,3 +14,10 @@ opt.wrap = true
 
 vim.opt.spell = true
 vim.opt.spelllang = "it,en"
+
+vim.filetype.add({
+  extension = {
+    razor = "razor",
+    cshtml = "razor",
+  },
+})
