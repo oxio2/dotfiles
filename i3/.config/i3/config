@@ -69,7 +69,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -238,7 +238,7 @@ client.background        $base
 
 
 # flameshot 
-bindsym $mod+Shift+n exec "flameshot gui"
+bindsym $mod+Shift+n exec "spectacle"
 
 
 exec --no-startup-id /usr/libexec/lxqt-policykit-agent
